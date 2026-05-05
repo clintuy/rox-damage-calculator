@@ -10,6 +10,7 @@ import roxLogo from "./assets/images/rox_logo.webp";
 import StatsForm from "./components/StatsForm";
 import DamageResult from "./components/DamageResult";
 import ScreenWidthWarning from "./components/ScreenWidthWarning";
+import Footer from "./components/Footer";
 
 type Mode = "pen" | "crit";
 
