@@ -5,6 +5,7 @@ import {
   calculateCritDamage,
   calculatePenDamage,
 } from "./utils/damageCalculator";
+import roxLogo from "./assets/images/rox_logo.webp";
 
 import StatsForm from "./components/StatsForm";
 import DamageResult from "./components/DamageResult";
@@ -34,7 +35,7 @@ export default function App() {
     <div className="App">
       <img
         className="h-48 w-96 object-cover mx-auto my-4 rounded-lg"
-        src="src/assets/images/rox_logo.webp"
+        src={roxLogo}
         alt="ROX Logo"
       />
 
