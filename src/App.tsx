@@ -9,6 +9,7 @@ import roxLogo from "./assets/images/rox_logo.webp";
 
 import StatsForm from "./components/StatsForm";
 import DamageResult from "./components/DamageResult";
+import ScreenWidthWarning from "./components/ScreenWidthWarning";
 
 type Mode = "pen" | "crit";
 
@@ -33,6 +34,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <ScreenWidthWarning minWidth={320} />
       <img
         className="h-48 w-96 object-cover mx-auto my-4 rounded-lg"
         src={roxLogo}
@@ -62,11 +64,10 @@ export default function App() {
         </button>
       </div>
       <h2>{title}</h2>
+      <DamageResult {...damage} />
       <hr />
       <div className="mt-2">
         <StatsForm stats={stats} update={update} mode={mode} />
-
-        <DamageResult {...damage} />
       </div>
     </div>
   );

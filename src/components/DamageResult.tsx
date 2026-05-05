@@ -9,6 +9,8 @@ type Props = {
 
 export default function DamageResult({ finalDmg = 0 }: Props) {
   return (
-    <h1 className="font-bold p-5">Final Damage: {formatDamage(finalDmg)}</h1>
+    <h1 className="font-bold p-5 text-lg sm:text-xl md:text-2xl">
+      Final Damage: {formatDamage(finalDmg)}
+    </h1>
   );
 }
