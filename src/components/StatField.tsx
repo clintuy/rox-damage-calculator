@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { Stats } from "../types/stats";
-// import Tooltip from "./Tooltip";
 
 type Props = {
   label: string;
@@ -22,6 +21,7 @@ export default function StatField({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const raw = e.target.value;
 
+    // allow only numbers + decimal
     if (!/^\d*\.?\d*$/.test(raw)) return;
 
     setInput(raw);
@@ -38,19 +38,16 @@ export default function StatField({
   };
 
   return (
-    <div className="flex flex-col gap-1">
-      <label className="text-sm text-gray-400 flex items-center justify-center">
-        {label}
-        {/* <Tooltip text="Increases damage dealt when a critical hit occurs." /> */}
-      </label>
+    <div className="flex flex-col gap-1 w-full">
+      <label className="text-sm text-gray-500 text-left">{label}</label>
 
       <div
         className="
-            flex items-center
-            rounded border border-gray-600
-            overflow-hidden
-            focus-within:border-blue-500
-            focus-within:ring-1 focus-within:ring-blue-500
+          flex items-center w-full
+          rounded border border-gray-400
+          overflow-hidden
+          focus-within:border-blue-500
+          focus-within:ring-1 focus-within:ring-blue-500
         "
       >
         <input
@@ -61,7 +58,7 @@ export default function StatField({
           onBlur={handleBlur}
           onFocus={(e) => e.target.select()}
           className="
-            w-full px-3 py-2
+            w-full px-4 py-3 sm:px-3 sm:py-2
             text-center
             bg-transparent text-black
             outline-none
@@ -69,7 +66,7 @@ export default function StatField({
         />
 
         {suffix && (
-          <span className="px-3 text-black border-l border-gray-600">
+          <span className="px-3 text-black border-l border-gray-400">
             {suffix}
           </span>
         )}
