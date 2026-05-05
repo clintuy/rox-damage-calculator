@@ -5,7 +5,7 @@ import {
   calculateCritDamage,
   calculatePenDamage,
 } from "./utils/damageCalculator";
-import roxLogo from "./assets/images/rox_logo.webp";
+// import roxLogo from "./assets/images/rox_logo.webp";
 
 import StatsForm from "./components/StatsForm";
 import DamageResult from "./components/DamageResult";
@@ -35,14 +35,9 @@ export default function App() {
   return (
     <div className="App">
       <ScreenWidthWarning minWidth={320} />
-      <img
-        className="h-48 w-96 object-cover mx-auto my-4 rounded-lg"
-        src={roxLogo}
-        alt="ROX Logo"
-      />
 
       {/* Mode Switch */}
-      <span className="text-gray">Please select mode:</span>
+      <p className="text-gray p-2">Please select mode:</p>
       <div className="flex gap-2 mb-4 justify-center">
         {/* <span className="text-gray-400">Select Mode:</span> */}
         <button
@@ -63,7 +58,7 @@ export default function App() {
           Crit
         </button>
       </div>
-      <h2>{title}</h2>
+      <h2 className="p-3">{title}</h2>
       <DamageResult {...damage} />
       <hr />
       <div className="mt-2">
