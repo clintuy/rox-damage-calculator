@@ -46,9 +46,11 @@ export default function StatField({
           flex items-center w-full
           rounded border border-gray-400
           overflow-hidden
+          shadow-sm
+          focus-within:shadow-md
           focus-within:border-blue-500
           focus-within:ring-1 focus-within:ring-blue-500
-        "
+          transition-shadow"
       >
         <input
           type="text"
@@ -62,6 +64,7 @@ export default function StatField({
             text-center
             bg-transparent text-black
             outline-none
+            text-gray-500
           "
         />
 

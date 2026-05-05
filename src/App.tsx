@@ -42,7 +42,7 @@ export default function App() {
         {/* <span className="text-gray-400">Select Mode:</span> */}
         <button
           onClick={() => setMode("pen")}
-          className={`w-64 px-4 py-2 rounded ${
+          className={`w-64 px-4 py-2 rounded shadow-sm ${
             mode === "pen" ? "bg-[#152a4b] text-white" : "bg-gray-200"
           }`}
         >
@@ -51,7 +51,7 @@ export default function App() {
 
         <button
           onClick={() => setMode("crit")}
-          className={`w-64 px-4 py-2 rounded ${
+          className={`w-64 px-4 py-2 rounded shadow-sm ${
             mode === "crit" ? "bg-[#152a4b] text-white" : "bg-gray-200"
           }`}
         >

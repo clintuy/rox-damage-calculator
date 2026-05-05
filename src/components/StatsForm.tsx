@@ -55,7 +55,7 @@ export default function StatsForm({ stats, update, mode }: Props) {
       <div className="flex gap-2">
         <button
           onClick={() => setActiveTab("attacker")}
-          className={`px-4 py-2 rounded-lg font-medium ${
+          className={`px-4 py-2 rounded-lg font-medium shadow-sm ${
             activeTab === "attacker" ? "bg-[#fa774a] text-white" : "bg-gray-200"
           }`}
         >
@@ -64,7 +64,7 @@ export default function StatsForm({ stats, update, mode }: Props) {
 
         <button
           onClick={() => setActiveTab("defender")}
-          className={`px-4 py-2 rounded-lg font-medium ${
+          className={`px-4 py-2 rounded-lg font-medium shadow-sm ${
             activeTab === "defender" ? "bg-[#152a4b] text-white" : "bg-gray-200"
           }`}
         >
